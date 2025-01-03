@@ -1,24 +1,25 @@
-import { Page, Text, Document, StyleSheet, Font } from '@react-pdf/renderer';
+import { Page, Text, Document, StyleSheet, Font } from "@react-pdf/renderer";
 
-import { Header } from './sections/header.tsx';
-import { COLOR, FONT_FAMILY } from './constants.ts';
-import { Bullet } from './elements/bullet.tsx';
-import { Row } from './elements/row.tsx';
-import { SectionHeading } from './elements/section-heading.tsx';
-import { Experience } from './sections/experience.tsx';
-import { Ul, Li } from './elements/ul.tsx';
-import { B } from './elements/b.tsx';
-import { resolveFontPath } from './utils/path/path.utils.ts';
-import { A } from './elements/a.tsx';
+import { Header } from "./sections/header.tsx";
+import { COLOR, FONT_FAMILY } from "./constants.ts";
+import { Bullet } from "./elements/bullet.tsx";
+import { Row } from "./elements/row.tsx";
+import { SectionHeading } from "./elements/section-heading.tsx";
+import { Experience } from "./sections/experience.tsx";
+import { Ul, Li } from "./elements/ul.tsx";
+import { B } from "./elements/b.tsx";
+import { resolveFontPath } from "./utils/path/path.utils.ts";
+import { A } from "./elements/a.tsx";
 
 const styles = StyleSheet.create({
   page: {
-    flexDirection: 'column',
+    flexDirection: "column",
     fontFamily: FONT_FAMILY.COMPUTER_MODERN,
     color: COLOR.PRIMARY,
     backgroundColor: COLOR.SECONDARY,
-    padding: '24pt 36pt',
-    fontSize: 10,
+    padding: "18pt 20pt",
+    margin: 0,
+    fontSize: 8,
     lineHeight: 1.2,
   },
 });
@@ -27,196 +28,294 @@ Font.register({
   family: FONT_FAMILY.COMPUTER_MODERN,
   fonts: [
     {
-      src: resolveFontPath('regular'),
-      fontStyle: 'normal',
-      fontWeight: 'normal'
+      src: resolveFontPath("regular"),
+      fontStyle: "normal",
+      fontWeight: "normal",
     },
     {
-      src: resolveFontPath('bold'),
-      fontStyle: 'bold',
-      fontWeight: 'bold'
+      src: resolveFontPath("bold"),
+      fontStyle: "bold",
+      fontWeight: "bold",
     },
-  ]
+  ],
 });
 
 export const CvDocument = () => (
   <Document>
     <Page size="A4" style={styles.page}>
-      <Header fullName="Daniil Sitdikov">
+      <Header fullName="Anton Konev">
         <Row>
           <Text>
-            <A src="https://www.linkedin.com/in/dsitdikov">
-              https://www.linkedin.com/in/dsitdikov
-            </A>
+            <A src="https://www.linkedin.com/in/antonkonevcom">LinkedIn</A>
           </Text>
           <Bullet />
-          <Text>dan.sitdikov@gmail.com</Text>
-          <Bullet />
-          <Text>+48 571801626</Text>
-        </Row>
-        <Row justifyContent="center">
           <Text>
-            <A src="https://github.com/Danilqa">
-              https://github.com/danilqa
-            </A>
+            <A src="https://github.com/evilj0e">Github</A>
           </Text>
           <Bullet />
-          <Text>London, UK | Global Talent Visa</Text>
+          <Text>London, UK</Text>
+          <Bullet />
+          <A src="mailto:info@antonkonev.com">info@antonkonev.com</A>
+          <Bullet />
+          <Text>+44 75 7054 3541</Text>
         </Row>
       </Header>
 
       <SectionHeading>Summary</SectionHeading>
       <Row>
         <Text>
-          Senior Frontend Developer with over 6.5 years of experience in product tech companies. Strong experience in
-          creating high-quality solutions from scratch, as well as improving performance in complex B2C application.
+          <B>Engineering Leader</B> with over <B>10 years of expertise</B> in
+          designing scalable solutions, managing cross-functional teams, and
+          delivering impactful projects for global audiences. A{" "}
+          <B>UK Global Talent visa holder</B>, recognized for driving
+          innovation, optimizing workflows, and achieving measurable results.
+          Passionate about solving complex challenges and leading
+          high-performing teams to build the future of technology.
         </Text>
+      </Row>
+
+      <SectionHeading>Skills</SectionHeading>
+      <Row>
+        <Text>System Design</Text>
+        <Bullet />
+        <Text>Scalable Architecture</Text>
+        <Bullet />
+        <Text>TypeScript</Text>
+        <Bullet />
+        <Text>React</Text>
+        <Bullet />
+        <Text>Node.js</Text>
+        <Bullet />
+        <Text>Microservices</Text>
+        <Bullet />
+        <Text>Kubernetes</Text>
+        <Bullet />
+        <Text>API Development</Text>
+        <Bullet />
+        <Text>Team Mentorship</Text>
+        <Bullet />
+        <Text>Agile Leadership</Text>
+        <Bullet />
+      </Row>
+      <Row>
+        <Text>Cloud Computing (AWS, GCP)</Text>
+        <Bullet />
+        <Text>Performance Optimization</Text>
+        <Bullet />
+        <Text>Cross-Functional Collaboration</Text>
+        <Bullet />
+        <Text>Process Optimization</Text>
       </Row>
 
       <SectionHeading>Work Experience</SectionHeading>
 
       <Experience
-        title="SoftSwiss"
-        subtitle="Senior Frontend Developer"
-        startDate="Oct 2022"
-        hasDuration={false}
+        title="Recraft, Inc"
+        subtitle="Engineering Team Lead"
+        startDate="Nov 2022"
+        hasDuration={true}
         hasDivider
       >
         <Text>
-          Working on a white-label Sportsbook platform for multinational users across the world. Developing 3 projects:
-          sports betting application, CMS, and back office.
+          Recraft AI is a cutting-edge image generation and editing platform,
+          revolutionizing digital creativity with over 2M active users across
+          200+ countries and more than 300M images created. Our image generation
+          model is the best in the market.
         </Text>
         <Ul>
           <Li>
-            Led the <B>performance optimization</B> process, improved <B>page load speed</B> of the main complex app:
-            the Lighthouse score on mobiles increased <B>from 6 to 68</B>. It allows for work in countries with low
-            internet speeds and low-end devices.
+            Designed and implemented a <B>scalable UI</B>, achieving{" "}
+            <B>2M+ users (200+ countries)</B> with over{" "}
+            <B>300M image generations</B>.
           </Li>
           <Li>
-            Decomposed, planned and implemented new complex features using <B>Next.js</B>, <B>React Query</B>,
-            and <B>Zustand</B>.
+            Honored as a <B>Top Contributor</B> for two consecutive years,
+            driving innovation and market expansion.
+          </Li>
+          <Li>
+            Established a <B>streamlined planning framework</B>, improving team
+            collaboration and accelerating project timelines.
           </Li>
         </Ul>
       </Experience>
 
       <Experience
         title="Arrival"
-        subtitle="Frontend Developer, then Senior Full-Stack Developer"
-        startDate="Jan 2019"
-        endDate="Oct 2022"
-        hasDuration={false}
+        subtitle="Tech Lead"
+        startDate="Dec 2019"
+        endDate="Nov 2022"
+        hasDuration={true}
         hasDivider
       >
         <Text>
-          Arrival is a British electric vehicle manufacturer implementing a new micro-factory approach to production.
+          Arrival, a British EV start-up, went public on NASDAQ in 2021 with a
+          valuation of $13 billion, marking the largest-ever listing for a UK
+          tech company at that time growing up to 3000 employees across the
+          globe at peak.
         </Text>
         <Ul>
           <Li>
-            Built an in-house procurement platform from scratch using <B>React</B>, <B>TypeScript</B>, <B>Redux</B>,
-            and <B>microservices</B> on <B>Kotlin</B> and <B>Camunda BPMN</B>. This reduced the supplier onboarding cycle time by <B>90%</B>,
-            decreased costs by <B>40%</B>, and improved data quality by <B>95%</B> for over <B>5000</B> onboarded suppliers.
+            Directed the <B>expansion from 1 product to 8</B>, overseeing
+            architecture and delivery across high-priority projects.
           </Li>
           <Li>
-            Developed a UI Kit library with <B>29</B> <B>React</B> components, <B>100%</B> test code
-            coverage and automatic doc generation.
+            Designed and implemented <B>Digital Assets Storage</B>, reducing
+            data transfer by <B>70%</B> and cutting delivery from{" "}
+            <B>12 to 5 minutes</B>, saving <B>23% in cloud costs</B>.
           </Li>
           <Li>
-            Automated the invoice management system by creating data pipelines using <B>Node.js</B> and <B>Rossum AI</B> for
-            extracting, recognizing and exporting invoices, which lowered invoice processing time from <B>15 minutes</B> to <B>1 minute.</B>
-          </Li>
-          <Li>
-            Integrated the best development practices: error monitoring, release process pipelines, linters, tracing, and e2e tests.
+            Recognized as <B>Employee of the Year</B> for two consecutive years
+            among <B>100+ Software Engineers</B>.
           </Li>
         </Ul>
       </Experience>
 
       <Experience
-        title="VeeRoute"
-        subtitle="Frontend Developer"
-        startDate="Sep 2017"
-        endDate="Jan 2019"
+        title="Yandex"
+        subtitle="Senior Frontend Developer"
+        startDate="Jan 2015"
+        endDate="Dec 2019"
         hasDivider
-        hasDuration={false}
-        isLast
+        hasDuration={true}
       >
         <Text>
-          VeeRoute is a start-up that produces solutions for the logistics of large e-commerce clients.
+          Yandex, one of the largest and leading technology companies in Russia.
         </Text>
         <Ul>
           <Li>
-            Assisted in the company's survival by collaborating with the team to create an app for the National
-            Kazakhstan Post within <B>3</B> months. This enabled the company to raise funds. The solution increased parcel
-            delivery by <B>5</B> times.
+            Led the development of a <B>core platform</B> supporting{" "}
+            <B>6,000+ developers (DAU)</B>, delivering <B>3 major projects</B>{" "}
+            in a year.
           </Li>
-          <Li>Developed a UI Kit library with <B>18</B> components based on the new design system.</Li>
-          <Li>Rewrote the main company project from <B>AngularJS</B> to <B>Angular 6</B> and <B>NgRx</B>, integrating a new design system.</Li>
+          <Li>
+            Reduced <B>time-to-market by 50%</B>, creating customizable
+            platforms that optimized internal workflows and lowered
+            infrastructure costs.
+          </Li>
+          <Li>
+            Built platforms with <B>broad organizational impact</B>, reducing
+            costs and improving workflows.
+          </Li>
+          <Li>
+            Contributed to <B>Yandex Browser’s market expansion into Turkey</B>,
+            driving a <B>5% market share growth in Russia</B>.
+          </Li>
+        </Ul>
+      </Experience>
+
+      <Experience
+        title="Devdigital"
+        subtitle="Co-Founder"
+        startDate="Jun 2012"
+        endDate="Jan 2015"
+        hasDivider
+        hasDuration={true}
+        isLast
+      >
+        <Ul>
+          <Li>
+            Delivered <B>20+ successful projects</B> across diverse domains,
+            including e-commerce and GIS systems.
+          </Li>
+          <Li>
+            Secured a grant for developing a GIS from the Belgorod Regional
+            Resource Innovation Center.
+          </Li>
+          <Li>
+            Built and managed a team of <B>10 developers</B>, fostering a
+            collaborative and innovative environment.
+          </Li>
+          <Li>
+            Established a solid foundation in <B>technical leadership</B>,{" "}
+            <B>business strategy</B>, and <B>innovative problem-solving</B>,
+            tackling complex engineering challenges.
+          </Li>
         </Ul>
       </Experience>
 
       <SectionHeading>Education</SectionHeading>
       <Experience
-        title="Saint Petersburg State University of Aerospace Instrumentation"
-        subtitle="Bachelor’s Degree in Software Engineering (GPA 4.28 / 5.0)"
-        startDate="2015"
-        endDate="2019"
+        title="Belgorod State Technological University"
+        subtitle="Master’s Degree in Computer Science, Information Technology (GPA 4.6/5)"
+        startDate="2008"
+        endDate="2013"
         hasDuration={false}
         isLast
       />
 
-      <SectionHeading>Skills</SectionHeading>
-      <Row>
-        <Text>JavaScript</Text>
-        <Bullet />
-        <Text>TypeScript</Text>
-        <Bullet />
-        <Text>React</Text>
-        <Bullet />
-        <Text>Next.js</Text>
-        <Bullet />
-        <Text>Performance Optimization</Text>
-        <Bullet />
-        <Text>React Query</Text>
-        <Bullet />
-        <Text>Zustand</Text>
-        <Bullet />
-        <Text>Redux</Text>
-      </Row>
-
-      <SectionHeading>Additional Activities</SectionHeading>
-      <Experience title="Volunteer Mentorship">
+      <SectionHeading>Professional Highlights</SectionHeading>
+      <Experience
+        title="UK Global Talent Endorsement"
+        hasDuration={false}
+        hasEndDate={false}
+        startDate="2023"
+      >
         <Text>
-          Mentored <B>37</B> developers one-on-one at <A src="https://getmentor.dev/mentor/daniil-sitdikov-1781">GetMentor</A>,
-          gave <B>6</B> tech talks, and mentored students at <A src="https://www.guidedao.xyz">GuideDao coding school</A>.
+          Recognized for exceptional contributions in digital technology.
         </Text>
       </Experience>
-      <Experience title="Open Source">
-        <Ul>
-          <Li>
-            Developed <A src="https://github.com/Danilqa/node-file-router">node-file-router</A>
-            {" "}(<B>119 stars</B>, <A src="https://devhunt.org/tool/node-file-router">2nd Tool of the Week, DevHunt</A>)
-          </Li>
-          <Li>
-            Contributed to <A src="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/55370">DefinitelyTyped / Jaeger</A> (<B>46.6k stars</B>)
-          </Li>
-          <Li>Other created projects:
-            {" "}<A src="https://github.com/Danilqa/web-performance-handbook">web-performance-handbook</A>,
-            {" "}<A src="https://github.com/Danilqa/image-proxy-service">image-proxy-service</A>,
-            {" "}<A src="https://github.com/Danilqa/react-props-diff-logger">react-props-diff-logger</A>
-          </Li>
-        </Ul>
-      </Experience>
-      <Experience title="Tech Writting">
+      <Experience
+        title="Program Committee Member – YaTalks Conference"
+        hasDuration={false}
+        hasEndDate={false}
+        startDate="2019"
+      >
         <Text>
-          Wrote <B>11</B> articles on <A src="https://dev.to/dsitdikov">Dev.to</A> and <A src="https://hackernoon.com/u/dsitdikov">Hackernoon</A>
-          {" "}with <B>26k</B> views in total. <B>3 </B>articles were featured as top stories.
-        </Text>.
+          Curated <B>8 talks</B> for a leading Front-End developer conference
+          with <B>19,000+ attendees and viewers</B>.
+        </Text>
       </Experience>
-      <Experience title="Hackaton — Digital Breakdown 2019" isLast>
+
+      <Experience
+        title="Community Organizer"
+        hasDuration={false}
+        startDate="2017"
+        endDate="2019"
+      >
         <Text>
-          <B>3-rd place</B> in the world’s largest hackathon, as{" "}
-          <A src="https://www.guinnessworldrecords.com/world-records/most-participants-in-a-software-development-marathon">
-            confirmed by <B>Guinness World Records.</B>
-          </A>
+          Founded and scaled BeerJS Ekaterinburg, hosting <B>48+ meetups</B> and
+          mentoring <B>3 speakers</B>; contributed to <B>UralJS</B> with{" "}
+          <B>9 events</B> attracting 100+ attendees.
+        </Text>
+      </Experience>
+      <SectionHeading>Educational Initiatives</SectionHeading>
+      <Experience
+        title="Coursera Course Co-Author and Mentor"
+        hasDuration={false}
+        hasEndDate={false}
+        startDate="2018"
+      >
+        <Text>
+          “JavaScript, Part 2: Prototypes and Async” with <B>7,400+ students</B>{" "}
+          and contributed to “Mathematical Thinking in Computer Science” with{" "}
+          <B>120,000+ students</B>.
+        </Text>
+      </Experience>
+
+      <Experience
+        title="Front-End Course (Ural Federal University)"
+        hasDuration={false}
+        hasEndDate={false}
+        startDate="2016"
+        endDate="2018"
+      >
+        <Text>
+          Co-authored and taught JavaScript, HTML, and CSS to{" "}
+          <B>410+ students</B>, with course materials earning{" "}
+          <B>130+ GitHub stars</B>.
+        </Text>
+      </Experience>
+
+      <SectionHeading>Awards and Grants</SectionHeading>
+      <Experience
+        title="Innovation Grant Winner"
+        hasDuration={false}
+        hasEndDate={false}
+        startDate="2012"
+      >
+        <Text>
+          Secured funding for a Geo-Information System (GIS) project from the
+          Belgorod Regional Resource Innovation Center.
         </Text>
       </Experience>
     </Page>

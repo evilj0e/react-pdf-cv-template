@@ -1,5 +1,5 @@
-import { memo, PropsWithChildren } from 'react';
-import { View, Text, StyleSheet } from '@react-pdf/renderer';
+import { memo, PropsWithChildren } from "react";
+import { View, Text, StyleSheet } from "@react-pdf/renderer";
 
 interface HeaderProps extends PropsWithChildren {
   fullName: string;
@@ -7,22 +7,22 @@ interface HeaderProps extends PropsWithChildren {
 
 const styles = StyleSheet.create({
   header: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
     marginBottom: -5,
   },
   fullName: {
-    fontSize: 14,
-    textTransform: 'uppercase',
-    fontStyle: 'bold',
+    fontSize: 13,
+    textTransform: "uppercase",
+    fontStyle: "bold",
     marginBottom: 2,
   },
   description: {
-    display: 'flex',
-    flexDirection: 'column',
-    fontSize: 12,
-  }
+    display: "flex",
+    flexDirection: "column",
+    fontSize: 10,
+  },
 });
 
 export const Header = memo<HeaderProps>(({ fullName, children }) => (
