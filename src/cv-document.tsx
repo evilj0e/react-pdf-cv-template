@@ -118,16 +118,15 @@ export const CvDocument = () => (
         hasDivider
       >
         <Text>
-          Recraft AI is a cutting-edge image generation and editing platform,
-          revolutionizing digital creativity with over 2M active users across
-          200+ countries and more than 300M images created. Our image generation
-          model is the best in the market.
+          Recraft is a cutting-edge image editing platform,
+          revolutionizing digital creativity with over 3M active users across
+          200+ countries and more than 350M images created.
         </Text>
         <Ul>
           <Li>
             Designed and implemented a <B>scalable UI</B>, achieving{" "}
-            <B>2M+ users (200+ countries)</B> with over{" "}
-            <B>300M image generations</B>.
+            <B>3M+ users (200+ countries)</B> with over{" "}
+            <B>350M image generations</B>.
           </Li>
           <Li>
             Honored as a <B>Top Contributor</B> for two consecutive years,
